@@ -18,10 +18,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 5),
+      Duration(seconds: 3),
           () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Bording()),
+        MaterialPageRoute(builder: (context) => OnBoarding()),
       ),
     );
   }
@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: 33.86,
               ),
               SizedBox(
-                height: 10,
+                height: 15,
               ),
               Image.asset(
                 ImageAssets.img5,

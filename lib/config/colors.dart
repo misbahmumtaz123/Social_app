@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const Color backgrnd1=Color(0xff888BF4);
   static const Color backgrnd2=Color(0xff5151C6);
+  static const Color white=Color(0xFFFFFFFF);
+  static const Color onbrd_btn=Color(0x4DD0D0D0);
   // static const Color backgroundColor=Colors.transparent;
   // static const Color primaryColor = Color(0xffE53935);
   // static const Color lightPrimaryColor = Color(0xff96BBFF);
@@ -20,7 +22,7 @@ class AppColors {
   // static const Color dashboardGreyColor = Color(0xffD9DFE9);
   // static const Color warningColor = Color(0xffFF9800);
   // static const Color white = Colors.white;
-  // static const Color black = Color(0xff292B2F);
+  static const Color black = Color(0xff292B2F);
   // static const Color dashboardYellow = Color(0xffFFDE59);
   // static const Color dashboardGreen = Color(0xffC9E265);
   // static const Color dashboardLightBlue = Color(0xff5B6BE3);
