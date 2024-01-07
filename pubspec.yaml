@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^0.22.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -66,6 +67,7 @@ flutter:
     - assets/images/splsh_4.png
     - assets/images/bg.png
     - assets/images/top.png
+    - assets/images/signin_bg.png
     - assets/icons/
   fonts:
     - family: Poppins
@@ -76,10 +78,11 @@ flutter:
         - asset: assets/fonts/Poppins-Thin.ttf
         - asset: assets/fonts/Poppins-Medium.ttf
         - asset: assets/fonts/Poppins-Regular.ttf
-        - asset: assets/fonts/Poppins-thin.ttf
+        - asset: assets/fonts/Poppins-ThinItalic.ttf
         - asset: assets/fonts/Poppins-SemiBold.ttf
         - asset: assets/fonts/Poppins-SemiBoldItalic.ttf
         - asset: assets/fonts/Poppins-MediumItalic.ttf
+          style: normal
 
 
 
