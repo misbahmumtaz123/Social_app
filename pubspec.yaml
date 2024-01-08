@@ -68,7 +68,10 @@ flutter:
     - assets/images/bg.png
     - assets/images/top.png
     - assets/images/signin_bg.png
-    - assets/icons/
+    - assets/images/login.png
+    - assets/images/sng.png
+    - assets/icons/facebook.svg
+    - assets/icons/google.svg
   fonts:
     - family: Poppins
       fonts:

@@ -9,6 +9,8 @@ class ImageAssets {
   static const String img5 = "$IMAGEPATH/bg.png";
   static const String img6 = "$IMAGEPATH/top.png";
   static const String img7 = "$IMAGEPATH/signin_bg.png";
+  static const String img8 = "$IMAGEPATH/login.png";
+  static const String img9 = "$IMAGEPATH/sng.png";
 }
 class SvgAssets {
  // google and facebook icons
