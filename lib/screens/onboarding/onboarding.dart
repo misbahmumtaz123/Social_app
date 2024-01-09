@@ -4,6 +4,8 @@ import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
 
+import '../auth/sign_in/sign_in.dart';
+
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
 
@@ -46,7 +48,7 @@ class OnBoarding extends StatelessWidget {
                     height: 10,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {  Navigator.push(context, MaterialPageRoute(builder: (c)=>LoginPage()));},
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(AppColors.onbrd_btn),

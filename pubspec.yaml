@@ -72,6 +72,7 @@ flutter:
     - assets/images/sng.png
     - assets/icons/facebook.svg
     - assets/icons/google.svg
+    - assets/icons/pswrd.svg
   fonts:
     - family: Poppins
       fonts:
