@@ -15,5 +15,8 @@ static const  Color color1 = Color(0xFF888BF4);
   static const Color color3 = Color(0xFF5252C7);
   static const Color txtfldclr =Color(0xFF3F5F7);
   static const Color emailtxtclr =Color(0xFFBDBDBD);
+  //login txt
+  static const Color txtclr1 =Color(0xFF606060);
+  static const Color txtclr2 =Color(0xFF5252C7);
 
 }
