@@ -13,5 +13,9 @@ class AppStrings {
   static const String sgUp='Already have an account?';
   static const String signin= 'SING IN';
   static const String cnfrmpswd= 'Confirm Password';
+  static const String vrftxtfld= 'Type verification code';
+  static const String txtinvrf= 'DON\'T RECEIVE THE CODE';
+  static const String Verify='VERIFY';
+  static const String Vrfy='VERIFICATION';
 
 }

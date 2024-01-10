@@ -26,6 +26,7 @@
 ///////////////////////////////
 import 'package:flutter/material.dart';
 import 'package:social_app/screens/auth/sign_up/sign_up.dart';
+import 'package:social_app/screens/auth/verification/verification.dart';
 
 import 'screens/auth/sign_in/sign_in.dart';
 void main()
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SignUp(),
+        body: Verification(),
       ),
     );
   }

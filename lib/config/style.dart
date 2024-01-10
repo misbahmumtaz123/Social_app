@@ -40,6 +40,18 @@ const fw400size16txtintxtfld = TextStyle(
   height: 1.5,
   letterSpacing: -0.2,
 );
+const fw700size16prpl = TextStyle(
+  color: AppColors.secondary,
+  fontSize: 16,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+);
+const fw400size18cntnrtext = TextStyle(
+  color: AppColors.cntnrtext,
+  fontSize: 18,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+);
 // InputDecoration buildInputDecoration(String labelText, String hintText) {
 //   return InputDecoration(
 //     labelText: labelText,

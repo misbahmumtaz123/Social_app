@@ -11,5 +11,9 @@ class AppColors {
   static const Color txtintxtfldclr =Color(0xFFBDBDBD);
   static const Color greytxtclr =Color(0xDD606060);
   static const Color purpletxtclr =Color(0xFF5252C7);
+  static const Color containerclr =Color(0xFF1F1FE);
+  static const Color cntnrtext =Color(0xFF242424);
+
+
 
 }

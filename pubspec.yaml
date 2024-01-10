@@ -72,6 +72,8 @@ flutter:
     - assets/images/signin_bg.png
     - assets/images/login.png
     - assets/images/sng.png
+    - assets/images/Verify.png
+    - assets/images/bottomimg.png
     - assets/icons/facebook.svg
     - assets/icons/google.svg
     - assets/icons/pswrd.svg
