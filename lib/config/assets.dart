@@ -18,6 +18,7 @@ class SvgAssets {
   static const String google = "$SVGPATH/google.svg";
   static const String facebook = "$SVGPATH/facebook.svg";
   static const String password = "$SVGPATH/pswrd.svg";
+  static const String Frame= "$SVGPATH/Frame.svg";
 }
 
 

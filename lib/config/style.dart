@@ -1,46 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:social_app/config/colors.dart';
-//text styling for onbording screen//
-//styling on onbording "Get Started" button
-//screen->onbording
-const btnt1TextStyle = TextStyle(
+const fw7hsize16white = TextStyle(
   color: AppColors.white,
   fontSize: 16,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w700,
 );
-//stylin on onbording "SHARE - INSPIRE - CONNECT"
-//screen->onbording
-const t1TextStyle = TextStyle(
+const fw4hsize14white = TextStyle(
   color: AppColors.white,
   fontSize: 14,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
+
 );
-//sign_in screen
-const emailTextStyle = TextStyle(
-  color: AppColors.white,
-  fontSize: 14,
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w400,
-);
-const SIGNUPTextStyle = TextStyle(
-  color: AppColors.txtclr2,
+
+const fw400size16purple = TextStyle(
+  color: AppColors.purpletxtclr,
   fontSize: 16,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 );
-const TextStyleblk = TextStyle(
-  color: AppColors.txtclr1,
+const fw400size16grey = TextStyle(
+  color: AppColors.greytxtclr,
   fontSize: 16,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 );
-const Frgtpswd = TextStyle(
-  color: AppColors.txtclr2,
+const fw400size14purple = TextStyle(
+  color: AppColors.purpletxtclr,
   fontSize: 14,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
+);
+const fw400size16txtintxtfld = TextStyle(
+  color: AppColors.txtintxtfldclr,
+  fontFamily: 'Poppins',
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  height: 1.5,
+  letterSpacing: -0.2,
 );
 // InputDecoration buildInputDecoration(String labelText, String hintText) {
 //   return InputDecoration(

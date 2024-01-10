@@ -15,7 +15,7 @@ class OnBoarding extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [AppColors.backgrnd1, AppColors.backgrnd2],
+            colors: [AppColors.primary, AppColors.secondary],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -43,22 +43,30 @@ class OnBoarding extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Text(AppStrings.onboardtext, style: t1TextStyle),
+                  Text(AppStrings.onboardtext, style:fw4hsize14white),
                   SizedBox(
                     height: 10,
                   ),
                   ElevatedButton(
-                    onPressed: () {  Navigator.push(context, MaterialPageRoute(builder: (c)=>LoginPage()));},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (c) => LoginPage()),
+                      );
+                    },
                     style: ButtonStyle(
+                      fixedSize: MaterialStateProperty.all(
+                        Size(160, 52),
+                      ),
                       backgroundColor:
-                          MaterialStateProperty.all(AppColors.onbrd_btn),
+                      MaterialStateProperty.all(AppColors.onbrd_btn),
                       padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(14, 24, 14, 24), // Use EdgeInsets.all() or EdgeInsets.fromLTRB()
+                        EdgeInsets.fromLTRB(14, 12, 14, 12),
                       ),
                     ),
                     child: Text(
                       AppStrings.onboardbtn,
-                      style: btnt1TextStyle,
+                      style: fw7hsize16white,
                     ),
                   ),
                 ],
