@@ -25,6 +25,7 @@
 // }
 ///////////////////////////////
 import 'package:flutter/material.dart';
+import 'package:social_app/screens/auth/forgot_password/forgetpassword.dart';
 import 'package:social_app/screens/auth/sign_up/sign_up.dart';
 import 'package:social_app/screens/auth/verification/verification.dart';
 
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Verification(),
+        body:  ForgetPassword(),
       ),
     );
   }

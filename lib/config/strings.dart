@@ -17,5 +17,11 @@ class AppStrings {
   static const String txtinvrf= 'DON\'T RECEIVE THE CODE';
   static const String Verify='VERIFY';
   static const String Vrfy='VERIFICATION';
+  static const String msg1='A message with verification code was sent to your mobile phone';
+  static const String msg2='We will send you instruction on how to reset your password';
+  static const String forgtH='TYPE YOUR EMAIL';
+  static const String send='SEND';
+  static const String msg3='Type your new password';
+  static const String hsetpassword='SET NEW PASSWORD';
 
 }
