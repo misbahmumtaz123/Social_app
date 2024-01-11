@@ -52,6 +52,19 @@ const fw400size18cntnrtext = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 );
+//who are you
+const fw700size20cntnrtext = TextStyle(
+  color: AppColors.cntnrtext,
+  fontSize: 20,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+);
+const fw400size14primary= TextStyle(
+  color: AppColors.primary,
+  fontSize: 14,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+);
 
 // InputDecoration buildInputDecoration(String labelText, String hintText) {
 //   return InputDecoration(

@@ -4,7 +4,7 @@ import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/sign_in/sign_in.dart';
-import 'package:social_app/screens/auth/verification/verification.dart';
+import 'package:social_app/screens/home/Selectcatagory.dart';
 
 class Verification extends StatelessWidget {
   @override
@@ -57,9 +57,8 @@ class Verification extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                           color: AppColors.txtfldclr,
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(24),
                         ),
-                        color: AppColors.txtfldclr,
                         height: screenSize.width * 0.35,
                         width: screenSize.width * 0.9,
                         padding: EdgeInsets.symmetric(
@@ -110,7 +109,7 @@ class Verification extends StatelessWidget {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (c) => LoginPage()),
+                                MaterialPageRoute(builder: (context) => LoginPage()),
                               );
                             },
                           ),
@@ -121,7 +120,7 @@ class Verification extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (c) => Verification()),
+                            MaterialPageRoute(builder: (c) => FirstScreen()),
                           );
                         },
                         child: Text(

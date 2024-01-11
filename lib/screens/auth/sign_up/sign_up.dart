@@ -135,7 +135,7 @@ class SignUp extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (c) => Verification()));
+                                MaterialPageRoute(builder: (c) =>Verification()));
                           },
                           child: Text(
                             AppStrings.signin,

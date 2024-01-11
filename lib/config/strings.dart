@@ -23,5 +23,7 @@ class AppStrings {
   static const String send='SEND';
   static const String msg3='Type your new password';
   static const String hsetpassword='SET NEW PASSWORD';
+  static const String headingCatagory='Who are you?';
+  static const String Explorenow='EXPLORE NOW';
 
 }

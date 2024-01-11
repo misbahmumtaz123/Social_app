@@ -6,7 +6,8 @@ import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/forgot_password/forgetpassword.dart';
 import 'package:social_app/screens/auth/sign_up/sign_up.dart';
-import 'package:social_app/screens/home/Homepage.dart';
+
+import '../../home/Selectcatagory.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -42,14 +43,14 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(screenSize.width * 0.05),
+                  padding: EdgeInsets.all(screenSize.width * 0.10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       TextField(
                         decoration: InputDecoration(
-                          hintText:  AppStrings.email,
-                          hintStyle:fw400size16txtintxtfld,
+                          hintText: AppStrings.email,
+                          hintStyle: fw400size16txtintxtfld,
                           fillColor: AppColors.txtfldclr,
                           filled: true,
                           enabledBorder: OutlineInputBorder(
@@ -70,7 +71,7 @@ class LoginPage extends StatelessWidget {
                       TextFormField(
                         decoration: InputDecoration(
                           hintText: AppStrings.password,
-                         hintStyle: fw400size16txtintxtfld,
+                          hintStyle: fw400size16txtintxtfld,
                           fillColor: AppColors.txtfldclr,
                           filled: true,
                           enabledBorder: OutlineInputBorder(
@@ -115,11 +116,13 @@ class LoginPage extends StatelessWidget {
                       Center(
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (c) => HomePage()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (c) => FirstScreen()));
                           },
                           child: Text(
-                           AppStrings.login,
+                            AppStrings.login,
                             style: TextStyle(color: AppColors.white),
                           ),
                           style: ElevatedButton.styleFrom(
@@ -146,7 +149,10 @@ class LoginPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text(AppStrings. lgin,style: fw400size16grey,),
+                          Text(
+                            AppStrings.lgin,
+                            style: fw400size16grey,
+                          ),
                         ],
                       ),
                       SizedBox(height: screenSize.width * 0.025),
@@ -154,13 +160,11 @@ class LoginPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           IconButton(
-                            onPressed: () {
-                            },
+                            onPressed: () {},
                             icon: SvgPicture.asset(SvgAssets.google),
                           ),
                           IconButton(
-                            onPressed: () {
-                            },
+                            onPressed: () {},
                             icon: SvgPicture.asset(SvgAssets.facebook),
                           ),
                         ],
@@ -171,13 +175,12 @@ class LoginPage extends StatelessWidget {
                         children: [
                           Text(
                             AppStrings.blktextlogin,
-                            style:fw400size16grey ,
+                            style: fw400size16grey,
                           ),
                           InkWell(
                             child: Text(
                               AppStrings.signupinlogin,
-                              style:
-                              fw400size16purple,
+                              style: fw400size16purple,
                             ),
                             onTap: () {
                               Navigator.push(context,

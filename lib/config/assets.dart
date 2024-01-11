@@ -8,12 +8,18 @@ class ImageAssets {
   static const String img3 = "$IMAGEPATH/splsh_3.png";
   static const String img4 = "$IMAGEPATH/splsh_4.png";
   static const String img5 = "$IMAGEPATH/bg.png";
-  static const String img6 = "$IMAGEPATH/top.png";
+  static const String img6 = "$IMAGEPATH/iclick.png";
   static const String img7 = "$IMAGEPATH/signin_bg.png";
   static const String img8 = "$IMAGEPATH/login.png";
   static const String img9 = "$IMAGEPATH/sng.png";
   static const String img10 = "$IMAGEPATH/Verify.png";
   static const String img11 = "$IMAGEPATH/bottomimg.png";
+  static const String img12= "$IMAGEPATH/iclick.png";
+  static const String img13 = "$IMAGEPATH/topimage.png";
+  static const String img14 = "$IMAGEPATH/photographer.png";
+  static const String img15 = "$IMAGEPATH/illustrator.png";
+  static const String img16= "$IMAGEPATH/videocreator.png";
+  static const String img17= "$IMAGEPATH/designer.png";
 }
 class SvgAssets {
  // google and facebook icons

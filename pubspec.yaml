@@ -68,12 +68,18 @@ flutter:
     - assets/images/splsh_3.png
     - assets/images/splsh_4.png
     - assets/images/bg.png
-    - assets/images/top.png
+    - assets/images/iclick.png
     - assets/images/signin_bg.png
     - assets/images/login.png
     - assets/images/sng.png
     - assets/images/Verify.png
     - assets/images/bottomimg.png
+    - assets/images/iclick.png
+    - assets/images/photographer.png
+    - assets/images/videocreator.png
+    - assets/images/illustrator.png
+    - assets/images/designer.png
+    - assets/images/topimage.png
     - assets/icons/facebook.svg
     - assets/icons/google.svg
     - assets/icons/pswrd.svg

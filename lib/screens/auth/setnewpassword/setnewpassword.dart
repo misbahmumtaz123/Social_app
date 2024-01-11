@@ -4,9 +4,6 @@ import 'package:social_app/config/assets.dart';
 import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
-import 'package:social_app/screens/auth/sign_in/sign_in.dart';
-import 'package:social_app/screens/auth/verification/verification.dart';
-
 class SetNewPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -54,11 +51,12 @@ class SetNewPassword extends StatelessWidget {
                         style: fw700size16prpl,
                         textAlign: TextAlign.center,
                       ),
+
                       SizedBox(height: 0.5),
                       Container(
                         decoration: BoxDecoration(
                           color: AppColors.txtfldclr,
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(24),
                         ),
                         height: 92,
                         width: screenSize.width * 0.9,
@@ -78,6 +76,7 @@ class SetNewPassword extends StatelessWidget {
                       SizedBox(height: screenSize.width * 0.05),
                       Container(
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(24),
                           color: AppColors.txtfldclr,
                         ),
                         width: screenSize.width * 0.9,
@@ -113,6 +112,7 @@ class SetNewPassword extends StatelessWidget {
                       SizedBox(height: screenSize.width * 0.05),
                       Container(
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(24),
                           color: AppColors.txtfldclr,
                         ),
                         width: screenSize.width * 0.9,
@@ -148,7 +148,6 @@ class SetNewPassword extends StatelessWidget {
                       SizedBox(height: screenSize.width * 0.13),
                       ElevatedButton(
                         onPressed: () {
-                          // Add logic to handle password submission
                         },
                         child: Text(
                           AppStrings.send,

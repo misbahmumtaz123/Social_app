@@ -3,9 +3,6 @@ import 'package:social_app/config/assets.dart';
 import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
-import 'package:social_app/screens/auth/sign_in/sign_in.dart';
-import 'package:social_app/screens/auth/verification/verification.dart';
-
 import '../setnewpassword/setnewpassword.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -57,7 +54,10 @@ class ForgetPassword extends StatelessWidget {
                       ),
                       SizedBox(height: 0.5),
                       Container(
-                        color: AppColors.txtfldclr,
+                        decoration: BoxDecoration(
+                          color: AppColors.txtfldclr,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
                         height: screenSize.width * 0.35,
                         width: screenSize.width * 0.9,
                         padding: EdgeInsets.symmetric(
@@ -75,7 +75,7 @@ class ForgetPassword extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                           color: AppColors.txtfldclr,
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(24),
                         ),
                         width: screenSize.width * 0.9,
                         child: TextField(
@@ -94,13 +94,13 @@ class ForgetPassword extends StatelessWidget {
                               borderSide: BorderSide.none,
                             ),
                             contentPadding: EdgeInsets.symmetric(
-                              vertical: 13,
-                              horizontal: 20,
+                              vertical: screenSize.width *0.04,
+                              horizontal:screenSize.width * 0.05,
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(height: screenSize.width * 0.3),
+                      SizedBox(height: screenSize.width * 0.25),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
@@ -133,7 +133,7 @@ class ForgetPassword extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: screenSize.width * 0.05),
+                      SizedBox(height: screenSize.width * 0.08),
                       Image.asset(
                         ImageAssets.img11,
                         height: 60,
