@@ -7,7 +7,8 @@ import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/forgot_password/forgetpassword.dart';
 import 'package:social_app/screens/auth/sign_up/sign_up.dart';
 
-import '../../home/Selectcatagory.dart';
+import '../../Selectcatagories/Selectcatagory.dart';
+
 
 class LoginPage extends StatelessWidget {
   @override

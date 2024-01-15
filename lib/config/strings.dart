@@ -25,5 +25,18 @@ class AppStrings {
   static const String hsetpassword='SET NEW PASSWORD';
   static const String headingCatagory='Who are you?';
   static const String Explorenow='EXPLORE NOW';
+  static const String Search='Search';
+  ///////////////////////////////////////////
+  static const String popular='Popular';
+  static const String trending ='Trending';
+  static const String following='Following';
+  static const String thanhpham='Thanh Pham';
+  static const String ago='1 hour ago';
+  static const String bruno='Bruno';
+  static const String twnty='20';
+  static const String thanh='Thanh Pham';
+  static const String threehudrd='300';
+  static const String onetwntyfine ='125';
+
 
 }

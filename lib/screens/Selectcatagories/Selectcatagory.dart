@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
-import 'package:social_app/screens/home/Homepage.dart';
 import '../../config/assets.dart';
+import '../Dashboard/Homepage.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);

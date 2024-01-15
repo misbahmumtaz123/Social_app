@@ -80,10 +80,24 @@ flutter:
     - assets/images/illustrator.png
     - assets/images/designer.png
     - assets/images/topimage.png
+    - assets/images/p1.png
+    - assets/images/p2.png
+    - assets/images/flt.png
+    - assets/images/person1.png
+    - assets/images/person2.png
     - assets/icons/facebook.svg
     - assets/icons/google.svg
     - assets/icons/pswrd.svg
     - assets/icons/Frame.svg
+    - assets/icons/search.svg
+    - assets/icons/share.svg
+    - assets/icons/add.svg
+    - assets/icons/home.svg
+    - assets/icons/like.svg
+    -  assets/icons/discover.svg
+    - assets/icons/profile.svg
+    - assets/icons/msg.svg
+    - assets/icons/notify.svg
   fonts:
     - family: Poppins
       fonts:

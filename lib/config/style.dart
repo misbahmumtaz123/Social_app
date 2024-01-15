@@ -65,6 +65,20 @@ const fw400size14primary= TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 );
+const fw4hsize14gery = TextStyle(
+  color: AppColors.gery,
+  fontSize: 14,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+
+);
+const fw4hsize16black = TextStyle(
+  color: AppColors.black,
+  fontSize: 16,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+
+);
 
 // InputDecoration buildInputDecoration(String labelText, String hintText) {
 //   return InputDecoration(

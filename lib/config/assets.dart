@@ -20,6 +20,13 @@ class ImageAssets {
   static const String img15 = "$IMAGEPATH/illustrator.png";
   static const String img16= "$IMAGEPATH/videocreator.png";
   static const String img17= "$IMAGEPATH/designer.png";
+  /////////////////////
+  static const String img18 = "$IMAGEPATH/p1.png";
+  static const String img19 = "$IMAGEPATH/p2.png";
+  static const String img20 = "$IMAGEPATH/person1.png";
+  static const String img21= "$IMAGEPATH/person2.png";
+  static const String img22= "$IMAGEPATH/flt.png";
+
 }
 class SvgAssets {
  // google and facebook icons
@@ -27,6 +34,16 @@ class SvgAssets {
   static const String facebook = "$SVGPATH/facebook.svg";
   static const String password = "$SVGPATH/pswrd.svg";
   static const String Frame= "$SVGPATH/Frame.svg";
+  static const String search= "$SVGPATH/search.svg";
+  static const String share= "$SVGPATH/share.svg";
+  static const String msg = "$SVGPATH/msg.svg";
+  static const String discover= "$SVGPATH/discover.svg";
+  static const String notify = "$SVGPATH/notify.svg";
+  static const String like= "$SVGPATH/like.svg";
+  static const String home = "$SVGPATH/home.svg";
+  static const String profile= "$SVGPATH/profile.svg";
+  //////////////////////////////
+  static const String add= "$SVGPATH/add.svg";
 }
 
 

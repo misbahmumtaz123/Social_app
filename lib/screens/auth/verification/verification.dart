@@ -4,7 +4,8 @@ import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/sign_in/sign_in.dart';
-import 'package:social_app/screens/home/Selectcatagory.dart';
+
+import '../../Selectcatagories/Selectcatagory.dart';
 
 class Verification extends StatelessWidget {
   @override
