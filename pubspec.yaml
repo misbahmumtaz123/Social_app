@@ -82,15 +82,24 @@ flutter:
     - assets/images/topimage.png
     - assets/images/p1.png
     - assets/images/p2.png
-    - assets/images/flt.png
     - assets/images/person1.png
     - assets/images/person2.png
+    - assets/images/flt.png
+    - assets/images/collection1.png
+    - assets/images/collection2.png
+    - assets/images/ph.png
+    - assets/images/ui.png
+    - assets/images/dsn.png
+    - assets/images/p3.png
+    - assets/images/p4.png
+    - assets/images/p5.png
     - assets/icons/facebook.svg
     - assets/icons/google.svg
     - assets/icons/pswrd.svg
     - assets/icons/Frame.svg
     - assets/icons/search.svg
     - assets/icons/share.svg
+    - assets/icons/arrow.svg
     - assets/icons/add.svg
     - assets/icons/home.svg
     - assets/icons/like.svg

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_app/config/colors.dart';
+////white
 const fw7hsize16white = TextStyle(
   color: AppColors.white,
   fontSize: 16,
@@ -13,15 +14,9 @@ const fw4hsize14white = TextStyle(
   fontWeight: FontWeight.w400,
 
 );
-
+////purple
 const fw400size16purple = TextStyle(
   color: AppColors.purpletxtclr,
-  fontSize: 16,
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w400,
-);
-const fw400size16grey = TextStyle(
-  color: AppColors.greytxtclr,
   fontSize: 16,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
@@ -32,30 +27,9 @@ const fw400size14purple = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 );
-const fw400size16txtintxtfld = TextStyle(
-  color: AppColors.txtintxtfldclr,
-  fontFamily: 'Poppins',
-  fontSize: 16,
-  fontWeight: FontWeight.w400,
-  height: 1.5,
-  letterSpacing: -0.2,
-);
 const fw700size16prpl = TextStyle(
   color: AppColors.secondary,
   fontSize: 16,
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w700,
-);
-const fw400size18cntnrtext = TextStyle(
-  color: AppColors.cntnrtext,
-  fontSize: 18,
-  fontFamily: 'Poppins',
-  fontWeight: FontWeight.w400,
-);
-//who are you
-const fw700size20cntnrtext = TextStyle(
-  color: AppColors.cntnrtext,
-  fontSize: 20,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w700,
 );
@@ -65,6 +39,36 @@ const fw400size14primary= TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 );
+//grey
+const fw400size16grey = TextStyle(
+  color: AppColors.greytxtclr,
+  fontSize: 16,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+);
+
+const fw400size16txtintxtfld = TextStyle(
+  color: AppColors.txtintxtfldclr,
+  fontFamily: 'Poppins',
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  height: 1.5,
+  letterSpacing: -0.2,
+);
+
+const fw400size18cntnrtext = TextStyle(
+  color: AppColors.cntnrtext,
+  fontSize: 18,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+);
+const fw700size20cntnrtext = TextStyle(
+  color: AppColors.cntnrtext,
+  fontSize: 20,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+);
+
 const fw4hsize14gery = TextStyle(
   color: AppColors.gery,
   fontSize: 14,
@@ -72,6 +76,7 @@ const fw4hsize14gery = TextStyle(
   fontWeight: FontWeight.w400,
 
 );
+///////Black
 const fw4hsize16black = TextStyle(
   color: AppColors.black,
   fontSize: 16,
@@ -79,6 +84,42 @@ const fw4hsize16black = TextStyle(
   fontWeight: FontWeight.w400,
 
 );
+const fw7hsize14black = TextStyle(
+  color: AppColors.black,
+  fontSize: 14,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+
+);
+const fw7hsize16black = TextStyle(
+  color: AppColors.black,
+  fontSize: 16,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+
+);
+const fw4hsize14blackprpl = TextStyle(
+  color: AppColors.blackprpl,
+  fontSize: 14,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+
+);
+const fw4hsize14lightblck = TextStyle(
+  color: AppColors.ligthblack,
+  fontSize: 14,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+
+);
+const fw7hsize20blck = TextStyle(
+  color: AppColors.black,
+  fontSize: 20,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+
+);
+
 
 // InputDecoration buildInputDecoration(String labelText, String hintText) {
 //   return InputDecoration(

@@ -26,6 +26,24 @@ class ImageAssets {
   static const String img20 = "$IMAGEPATH/person1.png";
   static const String img21= "$IMAGEPATH/person2.png";
   static const String img22= "$IMAGEPATH/flt.png";
+  ///////
+  static const String img23= "$IMAGEPATH/collection1.png";
+  static const String img24= "$IMAGEPATH/collection2.png";
+  static const String img25= "$IMAGEPATH/collection2.png";
+  static const String img26= "$IMAGEPATH/ui.png";
+  static const String img27= "$IMAGEPATH/ph.png";
+  static const String img28= "$IMAGEPATH/ph.png";
+  /////
+  static const String img29= "$IMAGEPATH/photograph.png";
+  static const String img30= "$IMAGEPATH/ilus.png";
+  static const String img31= "$IMAGEPATH/dsn.png";
+  static const String img32= "$IMAGEPATH/mvideo.png";
+  /////
+  static const String img33= "$IMAGEPATH/p3.png";
+  static const String img34= "$IMAGEPATH/p4.png";
+  static const String img35= "$IMAGEPATH/p5.png";
+  static const String img36= "$IMAGEPATH/p6.png";
+
 
 }
 class SvgAssets {
@@ -44,6 +62,7 @@ class SvgAssets {
   static const String profile= "$SVGPATH/profile.svg";
   //////////////////////////////
   static const String add= "$SVGPATH/add.svg";
+  static const String arrow= "$SVGPATH/arrow.svg";
 }
 
 

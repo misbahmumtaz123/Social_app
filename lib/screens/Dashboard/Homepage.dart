@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      ////////////////bottom nav bar----------------------
       floatingActionButton: ClipOval(
         child: FloatingActionButton(
           child: Image.asset(ImageAssets.img22, height: 20, width: 20),
@@ -127,7 +128,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      //AppBar-----------------------
+      //----------------------------------------------------
+      //------------------AppBar-----------------------
       appBar: AppBar(
         backgroundColor: AppColors.white,
         title: Row(
@@ -140,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                   fillColor: AppColors.txtfldclr,
                   filled: true,
                   contentPadding:
-                      EdgeInsets.symmetric(vertical: 8, horizontal: 14),
+                  EdgeInsets.symmetric(vertical: 8, horizontal: 14),
                   constraints: BoxConstraints(
                     maxWidth: 285,
                     maxHeight: 45,
@@ -200,6 +202,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      //----------------------------------------
       //body------------posts------
       body: ListView(
         padding: EdgeInsets.all(16.0),
@@ -229,7 +232,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                         AppStrings.thanhpham,
+                          AppStrings.thanhpham,
                           style: fw4hsize16black,
                         ),
                         SizedBox(width: 85),
@@ -301,7 +304,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Text(
                           AppStrings.bruno,
-                         style: fw4hsize16black,
+                          style: fw4hsize16black,
                         ),
                         SizedBox(width: 100),
                         Text(AppStrings.ago,style:fw4hsize14gery),
@@ -350,7 +353,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
+//--------------appbar
   Widget buildCategoryText(String category) {
     return GestureDetector(
       onTap: () {
@@ -368,7 +371,7 @@ class _HomePageState extends State<HomePage> {
                 ? FontWeight.bold
                 : FontWeight.normal,
             color:
-                selectedCategory == category ? AppColors.primary : Colors.grey,
+            selectedCategory == category ? AppColors.primary : Colors.grey,
           ),
         ),
       ),

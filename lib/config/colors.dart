@@ -15,6 +15,10 @@ class AppColors {
   static const Color containerclr =Color(0xFF1F1FE);
   static const Color bariclr =Color(0xFF6F7F9);
   static const Color gery =Color(0xFF808080);
+  static const Color blackprpl =Color( 0xFF8F90A7);
+  static const Color ligthblack =Color( 0xFF586274);
+
+
 
   static const Color cntnrtext =Color(0xFF242424);
 

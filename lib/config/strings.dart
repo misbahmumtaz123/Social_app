@@ -37,6 +37,18 @@ class AppStrings {
   static const String thanh='Thanh Pham';
   static const String threehudrd='300';
   static const String onetwntyfine ='125';
-
-
+  ///////challenge///
+  static const heading1 ='STREET NIGHT PROTRAIT';
+  static const String Deadline ='Deadline';
+  static const String Price='Price';
+  static const String price$='\$100.0';
+  static const String left30='30 day left';
+  static const String beforebtn='READ TO WIN THE CHALLENGE';
+  static const String buttnshot='SUBMIT YOUR SHOT';
+  static const String joinpeople='350 people have joined this challenge';
+  static const String challenge='Challenge';
+  static const String inspiration='Inspiration';
+  static const String trend='Trending';
+  static const String loerum1='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis risus, neque cursus risus. Eget dictumst vitce enim, felis marbi. Quis risus, newue cursus risus, Eget dictumst vitae enim, felis marbi Quis risus, neque cursus risus.';
+  static const String loerum2='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis risus, neque cursus risus. Eget dictumst vitce enim, felis marbi. Quis risus, newue cursus risus, Eget dictumst vitae enim, felis marbi Quis risus, neque cursus risus.';
 }
