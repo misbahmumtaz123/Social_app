@@ -17,10 +17,17 @@ class AppColors {
   static const Color gery =Color(0xFF808080);
   static const Color blackprpl =Color( 0xFF8F90A7);
   static const Color ligthblack =Color( 0xFF586274);
-
-
-
+  static const Color blk =Color(0x33FFFFFF);
+  static const Color blckgry =Color(0xFF828282);
+  static const Color blckgrd=Color(0xFFF6F7F9);
+  static const Color gggg=Color (0xFFBDBDBD);
+  static const Color gryshd =Color(0xFF2F2F2);
   static const Color cntnrtext =Color(0xFF242424);
+  static const Color bgblackish =Color(0xCC333333);
+  static const Color fldclrgry =Color(0xFFF6F7F9);
+  static const Color whitegry=Color(0x33FFFFFF);
+  static const Color fldclrpurplish=Color(0xF3F5F7);
+
 
 
 

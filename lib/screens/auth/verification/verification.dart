@@ -5,13 +5,14 @@ import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/sign_in/sign_in.dart';
 
-import '../../Selectcatagories/Selectcatagory.dart';
+import '../../WellcomScreen/Selectcatagory.dart';
 
 class Verification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Stack(
         children: [
           Positioned(

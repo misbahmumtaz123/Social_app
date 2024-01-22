@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
 import '../../config/assets.dart';
-import '../Dashboard/Homepage.dart';
+import '../HomeScreens/Home/HomePageBar.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -119,7 +119,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (c) => HomePage()),
+                        MaterialPageRoute(builder: (c) => BottomBar()),
                       );
                     },
                     child: Text(

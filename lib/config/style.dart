@@ -7,12 +7,30 @@ const fw7hsize16white = TextStyle(
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w700,
 );
+const fw7hsize24white = TextStyle(
+  color: AppColors.white,
+  fontSize: 24,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+);
+const fw4hsize16white = TextStyle(
+  color: AppColors.white,
+  fontSize: 16,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+);
 const fw4hsize14white = TextStyle(
   color: AppColors.white,
   fontSize: 14,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 
+);
+const fw7hsize14white = TextStyle(
+  color: AppColors.white,
+  fontSize: 14,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
 );
 ////purple
 const fw400size16purple = TextStyle(
@@ -98,9 +116,38 @@ const fw7hsize16black = TextStyle(
   fontWeight: FontWeight.w700,
 
 );
-const fw4hsize14blackprpl = TextStyle(
-  color: AppColors.blackprpl,
+const fw7hsize20black = TextStyle(
+  color: AppColors.black,
+  fontSize:20,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+
+);
+const fw7hsize24black = TextStyle(
+  color: AppColors.black,
+  fontSize:24,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w700,
+
+);
+
+const fw4hsize14black = TextStyle(
+  color: AppColors.black,
   fontSize: 14,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+
+);
+const fw4hsize12blackgry = TextStyle(
+  color: AppColors.blckgry,
+  fontSize: 12,
+  fontFamily: 'Poppins',
+  fontWeight: FontWeight.w400,
+
+);
+const fw4hsize16blackprpl = TextStyle(
+  color: AppColors.blackprpl,
+  fontSize: 16,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.w400,
 

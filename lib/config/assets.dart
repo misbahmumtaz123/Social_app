@@ -3,6 +3,7 @@ const String IMAGEPATH = "assets/images";
 const String SVGPATH = "assets/icons";
 
 class ImageAssets {
+
   static const String img1 = "$IMAGEPATH/splsh_1.png";
   static const String img2 = "$IMAGEPATH/splsh_2.png";
   static const String img3 = "$IMAGEPATH/splsh_3.png";
@@ -42,7 +43,22 @@ class ImageAssets {
   static const String img33= "$IMAGEPATH/p3.png";
   static const String img34= "$IMAGEPATH/p4.png";
   static const String img35= "$IMAGEPATH/p5.png";
-  static const String img36= "$IMAGEPATH/p6.png";
+  static const String img37= "$IMAGEPATH/circle.png";
+  static const String img38= "$IMAGEPATH/person3.png";
+  static const String img39= "$IMAGEPATH/man1.png";
+  static const String img40= "$IMAGEPATH/bg1.png";
+  static const String img41 = "$IMAGEPATH/per1.png";
+  static const String img42 = "$IMAGEPATH/per2.png";
+  static const String img43 = "$IMAGEPATH/per3.png";
+  static const String img44 = "$IMAGEPATH/per4.png";
+  static const String img45= "$IMAGEPATH/per5.png";
+  static const String img46 = "$IMAGEPATH/per6.png";
+  ////
+  static const String img47 = "$IMAGEPATH/activitimg.png";
+  static const String img48 = "$IMAGEPATH/bgimg.png";
+  static const String img49 = "$IMAGEPATH/p6.png";
+  static const String img50 = "$IMAGEPATH/p8.png";
+
 
 
 }
@@ -61,8 +77,28 @@ class SvgAssets {
   static const String home = "$SVGPATH/home.svg";
   static const String profile= "$SVGPATH/profile.svg";
   //////////////////////////////
+  static const String arows= "$SVGPATH/arows.svg";
   static const String add= "$SVGPATH/add.svg";
   static const String arrow= "$SVGPATH/arrow.svg";
+  static const String aro= "$SVGPATH/aro.svg";
+  static const String eyes= "$SVGPATH/eyes.svg";
+  static const String like1= "$SVGPATH/like1.svg";
+  static const String plus= "$SVGPATH/plus.svg";
+  static const String dowload= "$SVGPATH/dowload.svg";
+  static const String cross= "$SVGPATH/cross.svg";
+  static const String message= "$SVGPATH/message.svg";
+  ////
+  static const String insta= "$SVGPATH/insta.svg";
+  static const String fb= "$SVGPATH/fb.svg";
+  static const String global= "$SVGPATH/global.svg";
+  static const String setting= "$SVGPATH/setting.svg";
+  static const String heart= "$SVGPATH/heart.svg";
+  static const String sett= "$SVGPATH/sett.svg";
+  ////
+  static const String man2= "$SVGPATH/man2.svg";
+  static const String camera= "$SVGPATH/camera.svg";
+  static const String gallary= "$SVGPATH/gallary.svg";
+
 }
 
 

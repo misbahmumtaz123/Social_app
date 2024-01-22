@@ -12,68 +12,72 @@ class OnBoarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [AppColors.primary, AppColors.secondary],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+      backgroundColor: Colors.black,
+      body: Stack(
+        children:[
+          Image.asset(
+            ImageAssets.img48,
+            width: 395,
+            height: 812,
           ),
-        ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                ImageAssets.img6,
-                width: 99.88,
-                height: 33.86,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Image.asset(
-                ImageAssets.img5,
-                width: 345.4,
-                height: 422.42,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Column(
-                children: [
-                  Text(AppStrings.onboardtext, style:fw4hsize14white),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (c) => LoginPage()),
-                      );
-                    },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all(
-                        Size(160, 52),
+          Container(
+
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  ImageAssets.img6,
+                  width: 99.88,
+                  height: 33.86,
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Image.asset(
+                  ImageAssets.img5,
+                  width: 345.4,
+                  height: 422.42,
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Column(
+                  children: [
+                    Text(AppStrings.onboardtext, style:fw4hsize14white),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (c) => LoginPage()),
+                        );
+                      },
+                      style: ButtonStyle(
+                        fixedSize: MaterialStateProperty.all(
+                          Size(160, 52),
+                        ),
+                        backgroundColor:
+                        MaterialStateProperty.all(AppColors.onbrd_btn),
+                        padding: MaterialStateProperty.all(
+                          EdgeInsets.fromLTRB(14, 12, 14, 12),
+                        ),
                       ),
-                      backgroundColor:
-                      MaterialStateProperty.all(AppColors.onbrd_btn),
-                      padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(14, 12, 14, 12),
+                      child: Text(
+                        AppStrings.onboardbtn,
+                        style: fw7hsize16white,
                       ),
                     ),
-                    child: Text(
-                      AppStrings.onboardbtn,
-                      style: fw7hsize16white,
-                    ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
+    ],
       ),
     );
   }

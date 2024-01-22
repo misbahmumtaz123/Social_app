@@ -66,6 +66,7 @@ flutter:
     - assets/images/splsh_1.png
     - assets/images/splsh_2.png
     - assets/images/splsh_3.png
+    - assets/images/circle.png
     - assets/images/splsh_4.png
     - assets/images/bg.png
     - assets/images/iclick.png
@@ -75,12 +76,15 @@ flutter:
     - assets/images/Verify.png
     - assets/images/bottomimg.png
     - assets/images/iclick.png
+    - assets/images/bgimg.png
+    - assets/images/man1.png
     - assets/images/photographer.png
     - assets/images/videocreator.png
     - assets/images/illustrator.png
     - assets/images/designer.png
     - assets/images/topimage.png
     - assets/images/p1.png
+    - assets/images/man2.png
     - assets/images/p2.png
     - assets/images/person1.png
     - assets/images/person2.png
@@ -88,11 +92,22 @@ flutter:
     - assets/images/collection1.png
     - assets/images/collection2.png
     - assets/images/ph.png
+    - assets/images/p6.png
+    - assets/images/p8.png
+    - assets/images/bg1.png
     - assets/images/ui.png
     - assets/images/dsn.png
     - assets/images/p3.png
     - assets/images/p4.png
     - assets/images/p5.png
+    - assets/images/per1.png
+    - assets/images/per2.png
+    - assets/images/per3.png
+    - assets/images/per4.png
+    - assets/images/per5.png
+    - assets/images/per6.png
+    - assets/images/activitimg.png
+    - assets/images/person3.png
     - assets/icons/facebook.svg
     - assets/icons/google.svg
     - assets/icons/pswrd.svg
@@ -103,10 +118,26 @@ flutter:
     - assets/icons/add.svg
     - assets/icons/home.svg
     - assets/icons/like.svg
-    -  assets/icons/discover.svg
+    - assets/icons/discover.svg
     - assets/icons/profile.svg
     - assets/icons/msg.svg
+    - assets/icons/arows.svg
     - assets/icons/notify.svg
+    - assets/icons/aro.svg
+    - assets/icons/eyes.svg
+    - assets/icons/dowload.svg
+    - assets/icons/like1.svg
+    - assets/icons/heart.svg
+    - assets/icons/plus.svg
+    - assets/icons/message.svg
+    - assets/icons/cross.svg
+    - assets/icons/insta.svg
+    - assets/icons/fb.svg
+    - assets/icons/global.svg
+    - assets/icons/setting.svg
+    - assets/icons/sett.svg
+    - assets/icons/camera.svg
+    - assets/icons/gallary.svg
   fonts:
     - family: Poppins
       fonts:

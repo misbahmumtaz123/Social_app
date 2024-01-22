@@ -7,7 +7,7 @@ import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/forgot_password/forgetpassword.dart';
 import 'package:social_app/screens/auth/sign_up/sign_up.dart';
 
-import '../../Selectcatagories/Selectcatagory.dart';
+import '../../WellcomScreen/Selectcatagory.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -15,6 +15,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Stack(
         children: [
           Positioned(
