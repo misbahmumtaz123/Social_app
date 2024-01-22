@@ -1,10 +1,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:social_app/screens/onboarding/onboarding.dart';
 import 'package:social_app/screens/splash/SplashBody.dart';
 
-import '../../Config/Colors.dart';
-import '../onboarding/onboarding.dart';
 class SplashScreen extends StatefulWidget {
+  static const String routeName = "/splashScreen";
+
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
@@ -16,22 +17,16 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds:3),
-            () => Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => OnBoarding()),
-              (Route<dynamic> route) => false,
-        ));
-
+      Duration(seconds: 3),
+          () => Navigator.pushReplacementNamed(context, OnBoarding.routeName),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        body: SplashBody(),
-      ),
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SplashBody(),
     );
   }
 }

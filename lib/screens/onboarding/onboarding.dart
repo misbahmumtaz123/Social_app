@@ -7,6 +7,8 @@ import 'package:social_app/config/style.dart';
 import '../auth/sign_in/sign_in.dart';
 
 class OnBoarding extends StatelessWidget {
+
+  static String routeName = "/onBoard";
   const OnBoarding({Key? key}) : super(key: key);
 
   @override
@@ -81,4 +83,5 @@ class OnBoarding extends StatelessWidget {
       ),
     );
   }
+
 }
