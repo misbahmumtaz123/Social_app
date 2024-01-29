@@ -3,6 +3,8 @@ import 'package:social_app/config/assets.dart';
 import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
+import '../../../components/Textfields/emailtextfield.dart';
+import '../../../components/buttonstyle.dart';
 import '../setnewpassword/setnewpassword.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -39,11 +41,8 @@ class ForgetPassword extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(
-                    screenSize.width * 0.05, // left
-                    screenSize.width * 0.05, // top
-                    screenSize.width * 0.05, // right
-                    screenSize.width * 0.05, // bottom
+                  padding: EdgeInsets.all(
+                    screenSize.width * 0.05,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,59 +78,19 @@ class ForgetPassword extends StatelessWidget {
                           borderRadius: BorderRadius.circular(24),
                         ),
                         width: screenSize.width * 0.9,
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                            hintText: AppStrings.email,
-                            hintStyle: fw400size16txtintxtfld,
-                            fillColor: AppColors.txtfldclr,
-                            filled: true,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              borderSide: BorderSide.none,
-                            ),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: screenSize.width *0.04,
-                              horizontal:screenSize.width * 0.05,
-                            ),
-                          ),
+                        child:
+                        MyTextField(
+                          hintText: AppStrings.email,
                         ),
+
                       ),
                       SizedBox(height: screenSize.width * 0.25),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (c) => SetNewPassword()),
-                          );
-                        },
-                        child: Text(
-                          AppStrings.send,
-                          style: TextStyle(color: AppColors.white),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF888BF4),
-                          onPrimary: Colors.transparent,
-                          shadowColor: Colors.transparent,
-                          elevation: 0,
-                          minimumSize: Size(screenSize.width * 0.84, screenSize.width * 0.12),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                          padding: EdgeInsets.symmetric(
-                            vertical: screenSize.width * 0.05,
-                            horizontal: screenSize.width * 0.05,
-                          ),
-                          textStyle: TextStyle(
-                            fontSize: screenSize.width * 0.042,
-                            fontWeight: FontWeight.bold,
-                            height: 1.4,
-                            letterSpacing: 0.6,
-                          ),
+                      Center(
+                        child: MyElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (c) => SetNewPassword()));
+                          },
+                          label: AppStrings.send,
                         ),
                       ),
                       SizedBox(height: screenSize.width * 0.08),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:social_app/config/assets.dart';
 import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
@@ -7,10 +6,15 @@ import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/sign_in/sign_in.dart';
 import 'package:social_app/screens/auth/verification/verification.dart';
 
+import '../../../components/Textfields/emailtextfield.dart';
+import '../../../components/Textfields/passwordtextfield.dart';
+import '../../../components/buttonstyle.dart';
+
 class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
@@ -41,144 +45,46 @@ class SignUp extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(
-                    screenSize.width * 0.05, // left
-                    screenSize.width * 0.10, // top
-                    screenSize.width * 0.05, // right
-                    screenSize.width * 0.05, // bottom
-                  ),
-
+                  padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.04,
+                      vertical: screenSize.width * 0.09),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText:  AppStrings.email,
-                          hintStyle: fw400size16txtintxtfld,
-                          fillColor: AppColors.txtfldclr,
-                          filled: true,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: screenSize.width * 0.04,
-                            horizontal: screenSize.width * 0.05,
-                          ),
-                        ),
+                      MyTextField(
+                        hintText: AppStrings.email,
                       ),
                       SizedBox(height: screenSize.width * 0.05),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          hintText: AppStrings.password,
-                          hintStyle: fw400size16txtintxtfld,
-                          fillColor: AppColors.txtfldclr,
-                          filled: true,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: screenSize.width * 0.04,
-                            horizontal: screenSize.width * 0.05,
-                          ),
-                          suffixIcon: Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: SvgPicture.asset(
-                              SvgAssets.Frame,
-                              width: 24,
-                              height: 24,
-                            ),
-                          ),
-                        ),
-                        obscureText: true,
+                      PasswordTextField(
+                        hintText: AppStrings.password,
                       ),
                       SizedBox(height: screenSize.width * 0.05),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          hintText: AppStrings.cnfrmpswd,
-                          hintStyle: fw400size16txtintxtfld,
-                          fillColor: AppColors.txtfldclr,
-                          filled: true,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: screenSize.width * 0.04,
-                            horizontal: screenSize.width * 0.05,
-                          ),
-                          suffixIcon: Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: SvgPicture.asset(
-                              SvgAssets.Frame,
-                              width: 24,
-                              height: 24,
-                            ),
-                          ),
-                        ),
-                        obscureText: true,
+                      PasswordTextField(
+                        hintText: AppStrings.cnfrmpswd,
                       ),
-                      SizedBox(height: screenSize.width * 0.06),
+                      SizedBox(height: screenSize.width * 0.09),
                       Center(
-                        child: ElevatedButton(
+                        child: MyElevatedButton(
                           onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (c) =>Verification()));
+                            Navigator.push(context, MaterialPageRoute(builder: (c) => Verification()));
                           },
-                          child: Text(
-                            AppStrings.signin,
-                            style: TextStyle(color: AppColors.white),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            primary: Color(0xFF888BF4),
-                            onPrimary: Colors.transparent,
-                            shadowColor: Colors.transparent,
-                            elevation: 0,
-                            minimumSize: Size(screenSize.width * 0.84,
-                                screenSize.width * 0.12),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: screenSize.width * 0.05,
-                                horizontal: screenSize.width * 0.05),
-                            textStyle: TextStyle(
-                              fontSize: screenSize.width * 0.042,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                          label: AppStrings.signupinlogin,
                         ),
                       ),
-                      SizedBox(height: screenSize.width * 0.06),
+                      SizedBox(height: screenSize.width * 0.08),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Text(
                             AppStrings.sgUp,
-                            style:fw400size16grey ,
+                            style: fw400size16grey,
                           ),
                           InkWell(
                             child: Text(
                               AppStrings.signin,
-                              style:
-                              fw400size16purple,
+                              style: fw400size16purple,
                             ),
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (c) => LoginPage()));
+                              Navigator.push(context, MaterialPageRoute(builder: (c) => LoginPage()));
                             },
                           ),
                         ],

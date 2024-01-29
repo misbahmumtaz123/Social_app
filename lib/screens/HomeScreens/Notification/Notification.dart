@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../Config/assets.dart';
 import '../../../Config/strings.dart';
 import '../../../config/colors.dart';
@@ -30,29 +29,26 @@ class _NotificationScreenState extends State<NotificationScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left:15,right: 165),
+                  padding: EdgeInsets.only(left: deviceWidth * 0.05, right: deviceWidth * 0.35),
                   child: RichText(
                     text: TextSpan(
                       children: <TextSpan>[
-                        TextSpan(text: AppStrings.Activity, style:  fw7hsize24black),
+                        TextSpan(text: AppStrings.Activity, style: fw7hsize24black),
                         TextSpan(text: AppStrings.Act, style: fw400size14primary),
                       ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right:0.5,),
-                  child:
-                  IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (c) => ActivityScreen()));
-
-                    },
-                    icon: SvgPicture.asset(SvgAssets.sett),
-                  ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (c) => ActivityScreen(),
+                      ),
+                    );
+                  },
+                  icon: SvgPicture.asset(SvgAssets.sett),
                 ),
               ],
             ),
@@ -60,18 +56,19 @@ class _NotificationScreenState extends State<NotificationScreen> {
         ),
         body: Column(
           children: [
-            SizedBox(height: 15,),
+            SizedBox(height: 15),
             Expanded(
               child: ListView.builder(
                 itemCount: activitydata.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Column(
+                  return Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: deviceWidth * 0.05),
+                    child: Column(
                       children: [
                         Container(
-                          width: 370,
+                          width: deviceWidth,
                           height: 120,
-                          padding: EdgeInsets.only(left: 1, top: 10),
+                          padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             color: AppColors.blckgrd,
@@ -84,7 +81,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                 radius: 20.0,
                                 backgroundImage: AssetImage(activitydata[index].avatarImage),
                               ),
-                              SizedBox(width: 5),
+                              SizedBox(width: 10),
                               Expanded(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -117,23 +114,25 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                             style: fw4hsize12blackgry,
                                           ),
                                         ),
-                                        SizedBox(width: 75),
-                                        Stack(children:[
-                                          Positioned(
-                                              child: Image.asset(activitydata[index].image47,width: 80,height: 45)),
-                                          Positioned(
-                                            top: 1,
-                                            left: 45,
-                                            child: IconButton(
-                                              icon: SvgPicture.asset( activitydata[index].Likeicon),
-                                              onPressed: () {
-                                                setState(() {
-                                                  // Handle like button press
-                                                });
-                                              },
+                                       Spacer(),
+                                        Stack(
+                                          children: [
+                                            Positioned(
+                                              child: Image.asset(activitydata[index].image47, width: 80, height: 45),
                                             ),
-                                          ),
-                                        ] ),
+                                            Positioned(
+                                              top: 1,
+                                              left: 45,
+                                              child: IconButton(
+                                                icon: SvgPicture.asset(activitydata[index].Likeicon),
+                                                onPressed: () {
+                                                  setState(() {
+                                                  });
+                                                },
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ],
@@ -142,12 +141,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
                             ],
                           ),
                         ),
-                        //second-----------
                         SizedBox(height: 15),
                         Container(
-                          width: 370,
+                          width: deviceWidth,
                           height: 120,
-                          padding: EdgeInsets.only(left: 1, top: 10),
+                          padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             color: AppColors.blckgrd,
@@ -160,7 +158,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                 radius: 20.0,
                                 backgroundImage: AssetImage(activitydata[index].avatarImage),
                               ),
-                              SizedBox(width: 5),
+                              SizedBox(width: 10),
                               Expanded(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -193,16 +191,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                             style: fw4hsize12blackgry,
                                           ),
                                         ),
-                                        SizedBox(width: 100),
+                                       Spacer(),
                                         ElevatedButton(
                                           onPressed: () {
                                             // Add your follow logic here
                                           },
                                           style: ElevatedButton.styleFrom(
                                             primary: Colors.white,
-                                            onPrimary: AppColors.primary, // Set text color to purple
-                                            side: BorderSide(width: 1, color: AppColors.primary), // Set border color and width
-                                            padding: EdgeInsets.fromLTRB(5, 10, 6, 10),
+                                            onPrimary: AppColors.primary,
+                                            side: BorderSide(width: 1, color: AppColors.primary),
+                                            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(30),
                                             ),
@@ -220,7 +218,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
                             ],
                           ),
                         ),
-
                       ],
                     ),
                   );

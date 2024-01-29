@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../Config/assets.dart';
 import '../../../Config/strings.dart';
 import '../../../config/colors.dart';
 import '../../../config/style.dart';
 import '../../../models/messagesModel.dart';
 import 'MessageBruno.dart';
-import 'ProfileFollow.dart';
 class MessagesPage extends StatefulWidget {
   @override
   _MessagesPageState createState() => _MessagesPageState();
@@ -18,8 +16,6 @@ class _MessagesPageState extends State<MessagesPage> {
 
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,

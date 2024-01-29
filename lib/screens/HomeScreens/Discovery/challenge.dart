@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_app/config/assets.dart';
 import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_app/screens/HomeScreens/Discovery/ViewMoreScreen.dart';
 
+import '../../../components/buttonstyle.dart';
 import 'SubmitshortScreen.dart';
 
 class ChallengeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
+    final cardHeight = screenSize.height * 0.065;
+
     return MaterialApp(
       home: Scaffold(
         body: Stack(
@@ -20,20 +22,20 @@ class ChallengeScreen extends StatelessWidget {
             Positioned(
               top: 0,
               left: 0,
-              width: 375,
-              height: 250,
+              width: screenSize.width,
+              height: screenSize.height * 0.33,
               child: Image.asset(
                 ImageAssets.img20,
                 fit: BoxFit.cover,
               ),
             ),
             Positioned(
-              top: 54,
-              left: 25,
-              width: 32,
-              height: 32,
+              top: screenSize.height * 0.075,
+              left: screenSize.width * 0.0667,
+              width: screenSize.width * 0.0853,
+              height: screenSize.width * 0.0853,
               child: Container(
-                padding: EdgeInsets.all(0.04),
+                padding: EdgeInsets.all(screenSize.width * 0.01),
                 decoration: BoxDecoration(
                   color: AppColors.blk,
                   borderRadius: BorderRadius.circular(6.0),
@@ -41,46 +43,43 @@ class ChallengeScreen extends StatelessWidget {
                 child: Center(
                   child: IconButton(
                     onPressed: () {
-    Navigator.pop(context,
-    MaterialPageRoute(builder: (c) => Search()));
+                      Navigator.pop(context,
+                          MaterialPageRoute(builder: (c) => SearchPage()));
                     },
                     icon: SvgPicture.asset(SvgAssets.arrow),
                   ),
                 ),
               ),
-
-
             ),
-            //-----------------
             Positioned(
-              top: 230,
-              left: 35,
-              width: 285,
-              height: 45,
+              top: screenSize.height * 0.21,
+              left: screenSize.width * 0.125,
+              width: screenSize.width * 0.76,
+              height: cardHeight,
               child: Card(
                 color: Colors.white,
                 child: Center(
-                  child: Text(AppStrings.heading1, style: fw7hsize14black),
+                  child: Text(AppStrings.heading1, style: fw7hsize16black),
                 ),
               ),
             ),
             Positioned(
-              top: 272,
+              top: screenSize.height * 0.272,
               width: screenSize.width,
-              height: screenSize.height - 280,
+              height: screenSize.height - (screenSize.height * 0.28),
               child: Center(
                 child: SingleChildScrollView(
                   child: Container(
                     color: AppColors.white,
                     child: Padding(
-                      padding: EdgeInsets.all(screenSize.width * 0.10),
+                      padding: EdgeInsets.all(screenSize.width * 0.1),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
                             width: screenSize.width * 0.9,
-                            height: 49,
-                            padding: EdgeInsets.all(14),
+                            height: cardHeight,
+                            padding: EdgeInsets.all(screenSize.width * 0.04),
                             decoration: BoxDecoration(
                               color: AppColors.txtfldclr,
                               borderRadius: BorderRadius.circular(8),
@@ -92,7 +91,7 @@ class ChallengeScreen extends StatelessWidget {
                                   AppStrings.Deadline,
                                   style: fw7hsize16black,
                                 ),
-                                SizedBox(width: 16),
+                                SizedBox(width: screenSize.width * 0.04),
                                 Text(
                                   AppStrings.left30,
                                   style: fw4hsize14lightblck,
@@ -103,8 +102,8 @@ class ChallengeScreen extends StatelessWidget {
                           SizedBox(height: screenSize.width * 0.025),
                           Container(
                             width: screenSize.width * 0.9,
-                            height: 49,
-                            padding: EdgeInsets.all(14),
+                            height: cardHeight,
+                            padding: EdgeInsets.all(screenSize.width * 0.04),
                             decoration: BoxDecoration(
                               color: AppColors.txtfldclr,
                               borderRadius: BorderRadius.circular(8),
@@ -116,7 +115,7 @@ class ChallengeScreen extends StatelessWidget {
                                   AppStrings.Price,
                                   style: fw7hsize16black,
                                 ),
-                                SizedBox(width: 16),
+                                SizedBox(width: screenSize.width * 0.04),
                                 Text(
                                   AppStrings.price$,
                                   style: fw4hsize14lightblck,
@@ -131,35 +130,11 @@ class ChallengeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: screenSize.width * 0.025),
                           Center(
-                            child: ElevatedButton(
+                            child: MyElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (c) => VeiwPage()));
+                                Navigator.push(context, MaterialPageRoute(builder: (c) => VeiwPage()));
                               },
-                              child: Text(
-                                AppStrings.buttnshot,
-                                style: TextStyle(color: AppColors.white),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF888BF4),
-                                onPrimary: Colors.transparent,
-                                shadowColor: Colors.transparent,
-                                elevation: 0,
-                                minimumSize: Size(
-                                    screenSize.width * 0.84,
-                                    screenSize.width * 0.12),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0),
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: screenSize.width * 0.05),
-                                textStyle: TextStyle(
-                                  fontSize: screenSize.width * 0.042,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                              label: AppStrings.buttnshot,
                             ),
                           ),
                           SizedBox(height: screenSize.width * 0.025),
@@ -179,7 +154,7 @@ class ChallengeScreen extends StatelessWidget {
                                     TextSpan(text: AppStrings.joinpeople),
                                   ],
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           SizedBox(height: screenSize.width * 0.05),
@@ -192,18 +167,19 @@ class ChallengeScreen extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: screenSize.width * 0.025),
+                          SizedBox(height: screenSize.width * 0.025),
                           Column(
                             children: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset(ImageAssets.img37),
-                                  SizedBox(width: 5),
+                                  SizedBox(width: 15),
                                   Text(
                                     AppStrings.challenge,
                                     style: fw7hsize20black,
                                   ),
-                                  SizedBox(width: 5),
+                                  SizedBox(width: 15),
                                   Image.asset(ImageAssets.img37),
                                 ],
                               ),
@@ -226,52 +202,48 @@ class ChallengeScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset(ImageAssets.img37),
-                                  SizedBox(width: 5),
+                                  SizedBox(width: 15),
                                   Text(
                                     AppStrings.inspiration,
                                     style: fw7hsize20black,
                                   ),
-                                  SizedBox(width: 5),
+                                  SizedBox(width: 10),
                                   Image.asset(ImageAssets.img37),
                                 ],
                               ),
-                              SizedBox(height: 5),
+                              SizedBox(height: 15),
                               Row(
                                 children: [
                                   Expanded(
                                     child: Image.asset(ImageAssets.img33),
                                   ),
-                                  SizedBox(width: 2),
+                                  SizedBox(width: 5),
                                   Expanded(
                                     child: Image.asset(ImageAssets.img34),
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 5),
+                              SizedBox(height: 15),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Expanded(
-                                    child: Image.asset(ImageAssets.img37),
-                                  ),
-
+                                  Image.asset(ImageAssets.img37),
+                                  SizedBox(width: 15),
                                   Text(
-                                    AppStrings.trend,
+                                    AppStrings.trending,
                                     style: fw7hsize20black,
                                   ),
-
-                                  Expanded(
-                                    child: Image.asset(ImageAssets.img37),
-                                  ),
+                                  SizedBox(width: 10),
+                                  Image.asset(ImageAssets.img37),
                                 ],
                               ),
-                              SizedBox(height: 5),
+                              SizedBox(height: 15),
                               Row(
                                 children: [
                                   Expanded(
                                     child: Image.asset(ImageAssets.img35),
                                   ),
-                                  SizedBox(width: 2),
+                                  SizedBox(width:5),
                                   Expanded(
                                     child: Image.asset(ImageAssets.img35),
                                   ),

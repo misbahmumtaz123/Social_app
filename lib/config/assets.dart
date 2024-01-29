@@ -58,6 +58,7 @@ class ImageAssets {
   static const String img48 = "$IMAGEPATH/bgimg.png";
   static const String img49 = "$IMAGEPATH/p6.png";
   static const String img50 = "$IMAGEPATH/p8.png";
+  static const String img51 = "$IMAGEPATH/splashbg.png";
 
 
 
@@ -96,6 +97,7 @@ class SvgAssets {
   static const String sett= "$SVGPATH/sett.svg";
   ////
   static const String man2= "$SVGPATH/man2.svg";
+  static const String purpleheart= "$SVGPATH/purpleheart.svg";
   static const String camera= "$SVGPATH/camera.svg";
   static const String gallary= "$SVGPATH/gallary.svg";
 

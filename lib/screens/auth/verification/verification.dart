@@ -5,6 +5,7 @@ import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
 import 'package:social_app/screens/auth/sign_in/sign_in.dart';
 
+import '../../../components/buttonstyle.dart';
 import '../../WellcomScreen/Selectcatagory.dart';
 
 class Verification extends StatelessWidget {
@@ -118,39 +119,15 @@ class Verification extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: screenSize.width * 0.05),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (c) => FirstScreen()),
-                          );
-                        },
-                        child: Text(
-                          AppStrings.Verify,
-                          style: TextStyle(color: AppColors.white),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF888BF4),
-                          onPrimary: Colors.transparent,
-                          shadowColor: Colors.transparent,
-                          elevation: 0,
-                          minimumSize: Size(screenSize.width * 0.84, screenSize.width * 0.12),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                          padding: EdgeInsets.symmetric(
-                            vertical: screenSize.width * 0.05,
-                            horizontal: screenSize.width * 0.05,
-                          ),
-                          textStyle: TextStyle(
-                            fontSize: screenSize.width * 0.042,
-                            fontWeight: FontWeight.bold,
-                            height: 1.4,
-                            letterSpacing: 0.6,
-                          ),
+                      Center(
+                        child: MyElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (c) => FirstScreen()));
+                          },
+                          label: AppStrings.Verify,
                         ),
                       ),
-                      SizedBox(height: screenSize.width * 0.05),
+                      SizedBox(height: screenSize.width * 0.09),
                       Image.asset(
                         ImageAssets.img11,
                         height: 60,

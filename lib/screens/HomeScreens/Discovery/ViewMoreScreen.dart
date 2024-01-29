@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
-import '../../../config/assets.dart';
+import '../../../components/Textfields/searchtextfield.dart';
 import '../../../config/colors.dart';
 import '../../../config/strings.dart';
 import '../../../config/style.dart';
 import '../../../models/searchscreenModel.dart';
 import 'Discover.dart';
 import 'challenge.dart';
-
-class Search extends StatefulWidget {
-  const Search({Key? key}) : super(key: key);
+class SearchPage extends StatefulWidget {
+  const SearchPage({Key? key}) : super(key: key);
 
   @override
-  State<Search> createState() => _SearchState();
+  State<SearchPage> createState() => _SearchPageState();
 }
 
-class _SearchState extends State<Search> {
+class _SearchPageState extends State<SearchPage> {
   TextEditingController _searchController = TextEditingController();
 
   @override
@@ -30,38 +27,8 @@ class _SearchState extends State<Search> {
             child: Row(
               children: [
                 Expanded(
-                  child: TextFormField(
-                    controller: _searchController,
-                    decoration: InputDecoration(
-                      hintText: AppStrings.Search,
-                      hintStyle: fw400size16txtintxtfld,
-                      fillColor: AppColors.txtfldclr,
-                      filled: true,
-                      contentPadding: EdgeInsets.symmetric(
-                        vertical: 8,
-                        horizontal: 14,
-                      ),
-                      constraints: BoxConstraints(
-                        maxWidth: 150,
-                        maxHeight: 45,
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                        borderSide: BorderSide.none,
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                        borderSide: BorderSide.none,
-                      ),
-                      prefixIcon: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: SvgPicture.asset(
-                          SvgAssets.search,
-                          width: 24,
-                          height: 24,
-                        ),
-                      ),
-                    ),
+                  child: SearchTextField(
+                    onChanged: (value) {},
                   ),
                 ),
                 SizedBox(width: 10),
@@ -70,7 +37,7 @@ class _SearchState extends State<Search> {
                     Navigator.pop(
                         context,
                         MaterialPageRoute(
-                            builder: (c) =>Discover()));
+                            builder: (c) => Discover()));
                     _searchController.clear();
                   },
                   child: Container(
@@ -83,8 +50,8 @@ class _SearchState extends State<Search> {
                     ),
                     child: Center(
                       child: Text(
-                       AppStrings.cancel,
-                        style:fw4hsize14gery,
+                        AppStrings.cancel,
+                        style: fw4hsize14gery,
                       ),
                     ),
                   ),
@@ -96,14 +63,14 @@ class _SearchState extends State<Search> {
           Expanded(
             child: ListView.builder(
               scrollDirection: Axis.vertical,
-              itemCount: images3.length,
+              itemCount: itemdata.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (c) =>ChallengeScreen()));
+                            builder: (c) => ChallengeScreen()));
                     // Handle item tap
                   },
                   child: Container(
@@ -112,7 +79,7 @@ class _SearchState extends State<Search> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       image: DecorationImage(
-                        image: AssetImage(images3[index]),
+                        image: AssetImage(itemdata[index].images),
                         fit: BoxFit.cover,
                       ),
                     ),

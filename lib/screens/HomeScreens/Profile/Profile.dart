@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:social_app/screens/HomeScreens/Profile/Profilesetting.dart';
-
 import '../../../Config/Colors.dart';
 import '../../../Config/assets.dart';
 import '../../../Config/strings.dart';
@@ -19,9 +18,13 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   bool isFilterVisible = true;
   bool ispicVisible=false;
-
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+
+    double screenWidth = mediaQueryData.size.width;
+    double screenHeight = mediaQueryData.size.height;
+
     return MaterialApp(
       home: Scaffold(
         body: Container(
@@ -30,8 +33,8 @@ class _ProfilePageState extends State<ProfilePage> {
               Positioned(
                 top: 0,
                 left: 0,
-                width: 375,
-                height: 150,
+                width: screenWidth,
+                height: screenHeight * 0.2,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -46,8 +49,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               Positioned(
-                top: 76.74,
-                left: 108,
+                top: screenHeight * 0.10,
+                left: screenWidth * 0.28,
                 width: 247,
                 height: 17,
                 child: Row(
@@ -132,7 +135,6 @@ class _ProfilePageState extends State<ProfilePage> {
                                 Text(AppStrings.twnty,style: fw7hsize16black,),
                                 SizedBox(width: 5),
                                 Text(AppStrings.following,style: fw4hsize16blackprpl),
-                                ///////////////
 
                               ],
 
@@ -224,7 +226,6 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: MediaQuery.of(context).size.height,
                         width: 375,
                         child: GridView.builder(
-                          // physics: AlwaysScrollableScrollPhysics(), // Allow GridView to be scrollable
                           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             crossAxisSpacing: 15.0,

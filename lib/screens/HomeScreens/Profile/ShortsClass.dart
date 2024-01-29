@@ -1,8 +1,5 @@
-// shot_class.dart
-
 import 'package:flutter/material.dart';
 import 'package:social_app/models/profileModelShots.dart';
-import '../../../config/assets.dart';
 import '../../../config/colors.dart';
 
 class ShotClass extends StatelessWidget {
@@ -18,7 +15,6 @@ class ShotClass extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(shots.Images),
-            // Add more widgets if needed
           ],
         ),
 

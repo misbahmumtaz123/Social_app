@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../Config/assets.dart';
 import '../../../Config/strings.dart';
 import '../../../Config/style.dart';
-import '../../../main.dart';
-import '../../../models/settingModel.dart';
+import '../../../models/ProfilesettingModel.dart';
 import 'ProfileEdit.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -13,26 +11,26 @@ class SettingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return MaterialApp(
       home: Scaffold(
         body: Stack(
           children: [
-            // Background Image
             Positioned(
-              width: MediaQuery.of(context).size.width,
+              width: screenWidth,
               child: Image.asset(
                 ImageAssets.img48,
                 fit: BoxFit.cover,
               ),
             ),
-            // User Info Container
             Positioned(
               top: 60,
               left: 10,
               right: 6,
               child: Container(
                 height: 88,
-                width: MediaQuery.of(context).size.width - 16,
+                width: screenWidth - 16,
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
@@ -41,7 +39,6 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      // CircleAvatar
                       CircleAvatar(
                         radius: 35.0,
                         backgroundImage: AssetImage(ImageAssets.img50),
@@ -59,8 +56,7 @@ class SettingScreen extends StatelessWidget {
                       IconButton(
                         icon: SvgPicture.asset(SvgAssets.message, color: Colors.white),
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (c) => EditScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (c) => EditScreen()));
                         },
                       ),
                     ],
@@ -68,34 +64,281 @@ class SettingScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // Settings List
             Positioned(
-              top: 175,
+              top: 172,
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.8,
+                width: screenWidth * 0.8,
+                height: 40,
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Colors.white24,
                   borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(24),
-                    bottomRight: Radius.circular(24),
+                    topRight: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(0),
+                    topLeft: Radius.circular(0),
                   ),
+                  color: Colors.white24,
                 ),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: settings.map((setting) {
-                      return ListTile(
-                        title: Padding(
-                          padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
-                          child: Text(setting.Text, style: fw4hsize14white),
+                child: Row(
+                  children: [
+                    Text(AppStrings.email, style: fw4hsize16white),
+                    Spacer(),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            SvgAssets.arows,
+                          ),
+                          onPressed: () {},
                         ),
-                      );
-                    }).toList(),
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
             Positioned(
-              top: 575,
+              top: 225,
+              child: Container(
+                width: screenWidth * 0.8,
+                height: 40,
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(0),
+                    topLeft: Radius.circular(0),
+                  ),
+                  color: Colors.white24,
+                ),
+                child: Row(
+                  children: [
+                    Text(AppStrings.Paypal, style: fw4hsize16white),
+                    Spacer(),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            SvgAssets.arows,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 278,
+              child: Container(
+                width: screenWidth * 0.8,
+                height: 40,
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(0),
+                    topLeft: Radius.circular(0),
+                  ),
+                  color: Colors.white24,
+                ),
+                child: Row(
+                  children: [
+                    Text(AppStrings.Website, style: fw4hsize16white),
+                    Spacer(),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            SvgAssets.arows,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 333,
+              child: Container(
+                width: screenWidth * 0.8,
+                height: 40,
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(0),
+                    topLeft: Radius.circular(0),
+                  ),
+                  color: Colors.white24,
+                ),
+                child: Row(
+                  children: [
+                    Text(AppStrings.Instagram, style: fw4hsize16white),
+                    Spacer(),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            SvgAssets.arows,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 394,
+              child: Container(
+                width: screenWidth * 0.8,
+                height: 40,
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(0),
+                    topLeft: Radius.circular(0),
+                  ),
+                  color: Colors.white24,
+                ),
+                child: Row(
+                  children: [
+                    Text(AppStrings.Changepassword, style: fw4hsize16white),
+                    Spacer(),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            SvgAssets.arows,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 457,
+              child: Container(
+                width: screenWidth * 0.8,
+                height: 40,
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(0),
+                    topLeft: Radius.circular(0),
+                  ),
+                  color: Colors.white24,
+                ),
+                child: Row(
+                  children: [
+                    Text(AppStrings.Abouticvliv, style: fw4hsize16white),
+                    Spacer(),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            SvgAssets.arows,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 517,
+              child: Container(
+                width: screenWidth * 0.8,
+                height: 40,
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(0),
+                    topLeft: Radius.circular(0),
+                  ),
+                  color: Colors.white24,
+                ),
+                child: Row(
+                  children: [
+                    Text(AppStrings.Terms, style: fw4hsize16white),
+                    Spacer(),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(35),
+                        color: Colors.white10,
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                            SvgAssets.arows,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              top: 664,
               child: ElevatedButton.icon(
                 onPressed: () {
                   // Handle logout logic

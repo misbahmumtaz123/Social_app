@@ -1,240 +1,85 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../config/assets.dart';
-import '../../../config/colors.dart';
-import '../../../config/strings.dart';
-import '../../../config/style.dart';
+import '../../../Config/Colors.dart';
+import '../../../Config/assets.dart';
+import '../../../Config/strings.dart';
+import '../../../components/Textfields/searchtextfield.dart';
+import '../../../models/homeModel.dart';
+import 'HomepostClass.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePageBody extends StatefulWidget {
+  const HomePageBody({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageBody> createState() => _HomePageBodyState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageBodyState extends State<HomePageBody> {
   String selectedCategory = AppStrings.popular;
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
-      //------------------AppBar-----------------------
-      appBar: AppBar(
-        backgroundColor: AppColors.white,
-        title: Row(
-          children: [
-            Expanded(
-              child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: AppStrings.Search,
-                  hintStyle: fw400size16txtintxtfld,
-                  fillColor: AppColors.txtfldclr,
-                  filled: true,
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 8, horizontal: 14),
-                  constraints: BoxConstraints(
-                    maxWidth: 285,
-                    maxHeight: 45,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  prefixIcon: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: SvgPicture.asset(
-                      SvgAssets.search,
-                      width: 24,
-                      height: 24,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 15, right: 15),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: SvgPicture.asset(
-                  SvgAssets.share,
-                  width: 24,
-                  height: 24,
-                ),
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(CircleBorder()),
-                  padding: MaterialStateProperty.all(
-                    EdgeInsets.all(10),
-                  ),
-                  backgroundColor: MaterialStateProperty.all(
-                    AppColors.gry,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(70),
-          child: Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                buildCategoryText(AppStrings.popular),
-                buildCategoryText(AppStrings.trending),
-                buildCategoryText(AppStrings.following),
-              ],
-            ),
-          ),
-        ),
-      ),
-      //body------------posts------
-      body: ListView(
-        padding: EdgeInsets.all(16.0),
+      body: Column(
         children: [
-          // First Container
-          Container(
-            width: 375,
-            padding: EdgeInsets.all(8.0),
-            decoration: BoxDecoration(
+          Padding(
+            padding: EdgeInsets.only(top: screenHeight * 0.02),
+            child: Container(
+              width: screenWidth,
               color: AppColors.white,
-              borderRadius: BorderRadius.circular(8.0),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 20.0,
-                      backgroundImage: AssetImage(
-                        ImageAssets.img18,
-                      ),
-                    ),
-                    SizedBox(width: 8.0),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          AppStrings.thanhpham,
-                          style: fw4hsize16black,
+              child: Column(
+                children: [
+                  SizedBox(height: 30),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: SearchTextField(
+                          onChanged: (value) {},
                         ),
-                        SizedBox(width: 85),
-                        Text(AppStrings.ago, style: fw4hsize14gery),
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(height: 8.0),
-                Image.asset(
-                  ImageAssets.img20,
-                  fit: BoxFit.cover,
-                  height: 224.0,
-                  width: 335,
-                ),
-                SizedBox(height: 8.0),
-                Row(
-                  children: [
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        SvgAssets.add,
-                        color: AppColors.primary,
                       ),
-                      onPressed: () {},
-                    ),
-                    SizedBox(width: 125),
-                    Text(AppStrings.twnty, style: fw4hsize14gery),
-                    SizedBox(width: 0.05),
-                    IconButton(
-                      icon: SvgPicture.asset(SvgAssets.msg),
-                      onPressed: () {},
-                    ),
-                    SizedBox(width: 3),
-                    Text(AppStrings.onetwntyfine, style: fw4hsize14gery),
-                    IconButton(
-                      icon: SvgPicture.asset(SvgAssets.like),
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
-              ],
+                      Container(
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: SvgPicture.asset(
+                            SvgAssets.share,
+                            width: screenWidth * 0.064,
+                            height: screenWidth * 0.064,
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(),
+                            padding: EdgeInsets.all(screenWidth * 0.027),
+                            primary: AppColors.gry,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      buildCategoryText(AppStrings.popular, screenWidth),
+                      buildCategoryText(AppStrings.trending, screenWidth),
+                      buildCategoryText(AppStrings.following, screenWidth),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
-          SizedBox(
-            height: 15,
-          ),
-          //second
-          Container(
-            padding: EdgeInsets.all(8.0),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8.0),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius: 20.0,
-                      backgroundImage: AssetImage(
-                        ImageAssets.img19,
-                      ),
-                    ),
-                    SizedBox(width: 8.0),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          AppStrings.bruno,
-                          style: fw4hsize16black,
-                        ),
-                        SizedBox(width: 100),
-                        Text(AppStrings.ago, style: fw4hsize14gery),
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(height: 8.0),
-                Image.asset(
-                  ImageAssets.img21,
-                  fit: BoxFit.cover,
-                  height: 224.0,
-                  width: 335,
-                ),
-                SizedBox(height: 8.0),
-                Row(
-                  children: [
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        SvgAssets.add,
-                        color: AppColors.primary,
-                      ),
-                      onPressed: () {},
-                    ),
-                    SizedBox(width: 100),
-                    Text(AppStrings.threehudrd, style: fw4hsize14gery),
-                    IconButton(
-                      icon: SvgPicture.asset(SvgAssets.msg),
-                      onPressed: () {},
-                    ),
-                    SizedBox(width: 5),
-                    Text(AppStrings.twnty, style: fw4hsize14gery),
-                    IconButton(
-                      icon: SvgPicture.asset(SvgAssets.like),
-                      onPressed: () {
-                        // Add message functionality
-                      },
-                    ),
-                  ],
-                ),
-              ],
+          Expanded(
+            child: ListView.separated(
+              itemCount: posts.length,
+              itemBuilder: (context, index) {
+                PostModel post = posts[index];
+                return buildPostContainer(context, post);
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(height: screenHeight * 0.03);
+              },
             ),
           ),
         ],
@@ -242,8 +87,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-//--------------appbar
-  Widget buildCategoryText(String category) {
+  Widget buildCategoryText(String category, double screenWidth) {
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -251,16 +95,29 @@ class _HomePageState extends State<HomePage> {
         });
       },
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(
-          category,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: selectedCategory == category
-                ? FontWeight.bold
-                : FontWeight.normal,
-            color:
-                selectedCategory == category ? AppColors.primary : Colors.grey,
+        padding: const EdgeInsets.only(bottom: 8),
+        child: Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: screenWidth * 0.0427,
+            vertical: screenWidth * 0.0213,
+          ),
+          decoration: BoxDecoration(
+            color: selectedCategory == category
+                ? AppColors.gryshdbtn
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(screenWidth * 0.0213),
+          ),
+          child: Text(
+            category,
+            style: TextStyle(
+              fontSize: screenWidth * 0.048,
+              fontWeight: selectedCategory == category
+                  ? FontWeight.bold
+                  : FontWeight.normal,
+              color: selectedCategory == category
+                  ? AppColors.primary
+                  : Colors.grey,
+            ),
           ),
         ),
       ),

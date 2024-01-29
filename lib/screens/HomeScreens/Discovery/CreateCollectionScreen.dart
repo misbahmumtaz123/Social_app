@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../Config/Colors.dart';
 import '../../../Config/assets.dart';
 import '../../../Config/strings.dart';
-import '../../../config/colors.dart';
-import '../../../config/style.dart';
+import '../../../Config/style.dart';
 import '../../../models/commrntModel.dart';
 import 'AddCollection.dart';
 
@@ -29,21 +30,8 @@ class _CommentPageState extends State<CommentPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-            //  Padding(
-             //   padding: const EdgeInsets.only(right: 70),
-                // child: IconButton(
-                //   onPressed: () {
-                //     Navigator.push(
-                //         context,
-                //         MaterialPageRoute(
-                //             builder: (c) => VeiwPage()));
-                //
-                //   },
-                //   icon: SvgPicture.asset(SvgAssets.aro),
-                // ),
-            //  ),
               Center(child: Text(AppStrings.Comment, style: fw7hsize20blck)),
-              SizedBox(width: 75),
+              SizedBox(width: deviceWidth * 0.15),
               IconButton(
                 onPressed: () {},
                 icon: SvgPicture.asset(SvgAssets.message),
@@ -62,7 +50,7 @@ class _CommentPageState extends State<CommentPage> {
                   title: Column(
                     children: [
                       Container(
-                        width: 370,
+                        width: deviceWidth * 0.9,
                         height: 120,
                         padding: EdgeInsets.only(left: 1, top: 10),
                         decoration: BoxDecoration(
@@ -101,7 +89,7 @@ class _CommentPageState extends State<CommentPage> {
                                           left: 8.0,
                                           top: 8.0,
                                           bottom: 8.0,
-                                          right: 25.0,
+                                          right: 0.1,
                                         ),
                                         child: Text(
                                           data[index].time,
@@ -109,7 +97,7 @@ class _CommentPageState extends State<CommentPage> {
                                         ),
                                       ),
                                       Text(data[index].Liketext, style: fw4hsize14black),
-                                      SizedBox(width: 95),
+                                      SizedBox(width: deviceWidth * 0.2),
                                       IconButton(
                                         icon: SvgPicture.asset(data[index].likeicon),
                                         onPressed: () {

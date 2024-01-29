@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:social_app/config/colors.dart';
 import 'package:social_app/screens/HomeScreens/Discovery/Newcollection.dart';
-
+import 'package:social_app/screens/HomeScreens/Discovery/title.dart';
 import '../../../Config/assets.dart';
 import '../../../Config/strings.dart';
 import '../../../Config/style.dart';
-import 'CreateCollectionScreen.dart';
-
-
 class CollectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,18 +16,19 @@ class CollectionScreen extends StatelessWidget {
           children: [
             Positioned(
               top: 0,
-              height: 812,
-              width: 375,
+              height: screenSize.height,
+              width: screenSize.width,
               child: Container(
                 color: AppColors.bgblackish,
               ),
             ),
             // Background Card
+
             Positioned(
-              top: 270,
-              left: 15,
-              width: 333,
-              height: 545,
+              top: screenSize.height * 0.33,
+              left: screenSize.width * 0.02,
+              width: screenSize.width * 0.95,
+              height: screenSize.height * 0.67,
               child: Card(
                 color: AppColors.gggg,
                 elevation: 8,
@@ -44,12 +42,11 @@ class CollectionScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             // Foreground Card
             Positioned(
-              top: 285,
-              width: 360,
-              height: 545,
+              top: screenSize.height * 0.35,
+              width: screenSize.width * 0.99999,
+              height: screenSize.height * 0.65,
               child: Container(
                 margin: EdgeInsets.all(1.0),
                 decoration: BoxDecoration(
@@ -112,6 +109,12 @@ class CollectionScreen extends StatelessWidget {
                           children: [
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (c) => CollectionProfile(),
+                                  ),
+                                );
                               },
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12),
@@ -125,7 +128,12 @@ class CollectionScreen extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                print('Image 15 clicked');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (c) => CollectionProfile(),
+                                  ),
+                                );
                               },
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12),
@@ -135,21 +143,31 @@ class CollectionScreen extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                print('Image 17 clicked');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (c) => CollectionProfile(),
+                                  ),
+                                );
                               },
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(23),
-                                child: Image.asset(ImageAssets.img23,
+                                child: Image.asset(ImageAssets.img25,
                                     fit: BoxFit.cover, width: 158, height: 158),
                               ),
                             ),
                             GestureDetector(
                               onTap: () {
-                                print('Image 16 clicked');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (c) => CollectionProfile(),
+                                  ),
+                                );
                               },
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(ImageAssets.img23,
+                                child: Image.asset(ImageAssets.img25,
                                     fit: BoxFit.cover, width: 158, height: 158),
                               ),
                             ),
@@ -165,30 +183,33 @@ class CollectionScreen extends StatelessWidget {
 
             //Icon
             Positioned(
-              top: 262,
-              left: 165,
-              width: 36,
-              height: 36,
+              top: screenSize.height * 0.325,
+              left: screenSize.width * 0.44,
+              width: screenSize.width * 0.09,
+              height: screenSize.height * 0.045,
               child: Center(
-                child: Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: AppColors.white,
-                        borderRadius: BorderRadius.circular(36),
+                child: Container(
+                  width: 30,
+                  height: 30,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(45),
+                    color: Colors.white,
+                  ),
+                  child: Center(
+                    child: IconButton(
+                      icon: SvgPicture.asset(
+                        SvgAssets.cross,
                       ),
-                    ),
-                    IconButton(
                       onPressed: () {
                         Navigator.pop(
-                            context,
-                            MaterialPageRoute(
-                                builder: (c) => CommentPage()));
-
+                          context,
+                          MaterialPageRoute(
+                            builder: (c) => CollectionScreen(),
+                          ),
+                        );
                       },
-                      icon: SvgPicture.asset(SvgAssets.cross),
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),

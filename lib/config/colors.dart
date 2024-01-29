@@ -26,7 +26,11 @@ class AppColors {
   static const Color bgblackish =Color(0xCC333333);
   static const Color fldclrgry =Color(0xFFF6F7F9);
   static const Color whitegry=Color(0x33FFFFFF);
-  static const Color fldclrpurplish=Color(0xF3F5F7);
+  static const Color fldclrpurplish=Color(0x3F3F5F7);
+  /////
+
+  static const Color gryshdbtn=Color(0xFFF1F1FE);
+
 
 
 

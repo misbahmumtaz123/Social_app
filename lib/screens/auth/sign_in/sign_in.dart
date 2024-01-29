@@ -4,16 +4,26 @@ import 'package:social_app/config/assets.dart';
 import 'package:social_app/config/colors.dart';
 import 'package:social_app/config/strings.dart';
 import 'package:social_app/config/style.dart';
-import 'package:social_app/screens/auth/forgot_password/forgetpassword.dart';
+import 'package:social_app/screens/WellcomScreen/Selectcatagory.dart';
 import 'package:social_app/screens/auth/sign_up/sign_up.dart';
 
-import '../../WellcomScreen/Selectcatagory.dart';
+import '../../../components/Textfields/emailtextfield.dart';
+import '../../../components/Textfields/passwordtextfield.dart';
+import '../../../components/buttonstyle.dart';
+import '../forgot_password/forgetpassword.dart';
 
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
 
-class LoginPage extends StatelessWidget {
+class _LoginPageState extends State<LoginPage> {
+  bool _obscurePassword = true;
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
@@ -28,7 +38,6 @@ class LoginPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          // Card Widget
           Positioned(
             top: 272,
             width: screenSize.width,
@@ -45,68 +54,28 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(screenSize.width * 0.10),
+                  padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.04,
+                      vertical: screenSize.width * 0.09),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: AppStrings.email,
-                          hintStyle: fw400size16txtintxtfld,
-                          fillColor: AppColors.txtfldclr,
-                          filled: true,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: screenSize.width * 0.04,
-                            horizontal: screenSize.width * 0.05,
-                          ),
-                        ),
+                      MyTextField(
+                        hintText: AppStrings.email,
                       ),
-                      SizedBox(height: screenSize.width * 0.025),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          hintText: AppStrings.password,
-                          hintStyle: fw400size16txtintxtfld,
-                          fillColor: AppColors.txtfldclr,
-                          filled: true,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            borderSide: BorderSide.none,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            vertical: screenSize.width * 0.04,
-                            horizontal: screenSize.width * 0.05,
-                          ),
-                          suffixIcon: Padding(
-                            padding: EdgeInsets.all(12.0),
-                            child: SvgPicture.asset(
-                              SvgAssets.Frame,
-                              width: 24,
-                              height: 24,
-                            ),
-                          ),
-                        ),
-                        obscureText: true,
+                      SizedBox(height: screenSize.width * 0.05),
+                      PasswordTextField(
+                        hintText: AppStrings.password,
                       ),
-                      SizedBox(height: screenSize.width * 0.025),
+                      SizedBox(height: screenSize.width * 0.05),
                       Center(
                         child: TextButton(
                           onPressed: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (c) => ForgetPassword()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (c) => ForgetPassword(),
+                              ),
+                            );
                           },
                           child: Text(
                             AppStrings.ForgotPassword,
@@ -114,40 +83,16 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: screenSize.width * 0.025),
+                      SizedBox(height: screenSize.width * 0.05),
                       Center(
-                        child: ElevatedButton(
+                        child: MyElevatedButton(
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (c) => FirstScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (c) => FirstScreen()));
                           },
-                          child: Text(
-                            AppStrings.login,
-                            style: TextStyle(color: AppColors.white),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            primary: Color(0xFF888BF4),
-                            // Set the button color here
-                            onPrimary: Colors.transparent,
-                            shadowColor: Colors.transparent,
-                            elevation: 0,
-                            minimumSize: Size(screenSize.width * 0.84,
-                                screenSize.width * 0.12),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: screenSize.width * 0.05),
-                            textStyle: TextStyle(
-                              fontSize: screenSize.width * 0.042,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                          label: AppStrings.login,
                         ),
                       ),
-                      SizedBox(height: screenSize.width * 0.025),
+                      SizedBox(height: screenSize.width * 0.06),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -157,7 +102,6 @@ class LoginPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: screenSize.width * 0.025),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -171,7 +115,7 @@ class LoginPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: screenSize.width * 0.025),
+                      SizedBox(height: screenSize.width * 0.06),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -185,8 +129,10 @@ class LoginPage extends StatelessWidget {
                               style: fw400size16purple,
                             ),
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (c) => SignUp()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (c) => SignUp()));
                             },
                           ),
                         ],
