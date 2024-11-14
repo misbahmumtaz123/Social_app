@@ -1,5 +1,5 @@
 # social_app
-![Alt text](/Group2.png)
+![Alt text](cover.png)
 
 A new Flutter project.
 
